@@ -63,8 +63,8 @@ void q_short(int low, int high)
 			cmp_count++;
 		}
 		cmp_count++;
-		//search for an element less than or equal to pivot 
-		while ((arr[j] > pivot) && (j >= low)) //step 7
+		//search for an element less than or equal to pivot
+		while ((arr[j] > pivot) && (j >= low)) //step 7 
 		{
 			j--; //step 8
 			cmp_count++;
@@ -72,10 +72,11 @@ void q_short(int low, int high)
 		cmp_count++;
 		if (i < j) //step 9
 		{
-			//swap the element at index i whit the element at index j
-			swap(i < j);
+			//swap the element at index i with the element at index j
+			swap(i, j);
 		}
 	}
+
 
 	if (low < j){ //step 11
 		//swap the pivot element with the element at index j
@@ -89,18 +90,19 @@ void q_short(int low, int high)
 }
 
 void display() {
-	cout << "\n--------------" << endl;
+	cout << "\n-------------------" << endl;
 	cout << "Sorted Array" << endl;
-	cout << "----------------" << endl;
+	cout << "---------------------" << endl;
 
-	for (int i = 0; i < n; i++);
+	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << " ";
 	}
 
 	cout << "\n\nNumber of comparasions: " << cmp_count << endl;
-	cout << "Number of data movement: " << mov_count << endl;
+	cout << "Number of data movements: " << mov_count << endl;
 }
+
 int main()
 {
 	char ch;
@@ -122,3 +124,4 @@ int main()
 	return 0;
 }
 
+//Selesai
